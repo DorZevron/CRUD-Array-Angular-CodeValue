@@ -1,0 +1,24 @@
+<div class="mt-5">
+
+  <div class="product" *ngIf="product" (click)="onSetUpdateMode(product)">
+
+    <div class="product-info" style="border: 1px solid black;">
+      <div class="row">
+
+        <div class="col-xs-12 col-lg-4">
+          <img [src]='product.image' width="150px">
+        </div>
+
+        <div class="col-xs-12 col-6">
+          <h4 class="productName">{{product.name}}</h4>
+          <p class="productDescription">{{product.description}}</p>
+
+        </div>
+
+        <div class="col-xs-12 col-2 pt-4">
+          <button (click)="onProductDelete()" class="btn btn-danger">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
